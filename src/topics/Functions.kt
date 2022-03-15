@@ -29,5 +29,5 @@ fun testDafaultArguments(x: Int = 1, y: Int = 2) {
 }
 
 fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false):String {
-    return (if (toUpperCase) name.uppercase() else name) + number
+    return (if (toUpperCase) name.uppercase() else name) + " " + number
 }
