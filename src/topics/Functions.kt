@@ -6,6 +6,8 @@ println(testString(x=10))
     testNamedArguments(3,4,5)
     testDafaultArguments(y=4)
     println(foo("John"))
+    printEvent(1,2,3,4,5,6)
+    printEvent(*intArrayOf(1,2,3,4,5,6,7,8),9,10) //* - разбивает массив на элементы
 }
 
 fun testSimple():Int {
@@ -30,4 +32,9 @@ fun testDafaultArguments(x: Int = 1, y: Int = 2) {
 
 fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false):String {
     return (if (toUpperCase) name.uppercase() else name) + number
+}
+
+//vararg
+fun printEvent(vararg numbers: Int) {
+    numbers.forEach { e -> if (e % 2 == 0) println(e) }
 }
